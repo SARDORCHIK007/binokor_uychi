@@ -1,0 +1,39 @@
+{
+  "name": "uychi-builders",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "generate:land-mask": "node scripts/generate-land-mask.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "framer-motion": "^11.18.2",
+    "gsap": "^3.15.0",
+    "i18next": "^26.4.2",
+    "lucide-react": "^1.50.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^17.0.15",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.6.1",
+    "d3-geo": "^3.1.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.19",
+    "topojson-client": "^3.1.0",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "world-atlas": "^2.0.2"
+  }
+}

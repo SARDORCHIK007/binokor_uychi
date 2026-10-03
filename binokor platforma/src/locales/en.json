@@ -1,0 +1,369 @@
+{
+  "brand": {
+    "name": "UYCHI BUILDERS",
+    "sub": "Construction Skills Academy",
+    "slogan": "From Uychi to the world — professional builders"
+  },
+  "nav": {
+    "project": "Project",
+    "model": "Model",
+    "trades": "Trades",
+    "international": "International",
+    "results": "Results",
+    "partners": "Partners",
+    "contact": "Contact",
+    "roadmap": "Roadmap",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "toTop": "Back to top",
+    "langLabel": "Choose language",
+    "main": "Main menu",
+    "campus": "Campus"
+  },
+  "hero": {
+    "eyebrow": "NAMANGAN REGION · UYCHI DISTRICT",
+    "title": "UYCHI BUILDERS",
+    "subtitle": "From Uychi to the world — professional builders",
+    "ctaPrimary": "Explore the project",
+    "ctaSecondary": "Become a partner",
+    "sceneAlt": "3D illustration of a building under construction: a crane sets the floors in place one by one",
+    "initiatorLabel": "Project initiator",
+    "initiator": "Namangan State Technical University",
+    "goalLabel": "Project goal",
+    "goal": "To train craftsmen and young people of Uychi District in modern construction trades and prepare them — with a higher-education diploma and a foreign language — for the domestic and international markets.",
+    "locationLabel": "Campus",
+    "location": "NamSTU Faculty of Civil Engineering, Uychi District",
+    "partnersLabel": "Partners"
+  },
+  "problem": {
+    "title": "Why is this project needed?",
+    "intro": "Uychi District has a strong building tradition and many skilled craftsmen. Yet their potential is not being fully realised.",
+    "cards": [
+      {
+        "title": "Unverified qualifications.",
+        "text": "Many craftsmen have worked for years, yet hold no document confirming their skills. This limits their pay and their opportunities."
+      },
+      {
+        "title": "The language barrier.",
+        "text": "Builders who go abroad without the local language end up working as general labourers on low wages instead of as qualified specialists."
+      },
+      {
+        "title": "A shortage of skilled workers.",
+        "text": "The domestic market lacks professional builders who know modern technologies and can deliver quality, safe construction."
+      }
+    ]
+  },
+  "model": {
+    "title": "From craftsman to the global market",
+    "intro": "The project runs on a five-stage chain. Each stage lays the foundation for the next.",
+    "steps": [
+      {
+        "title": "Engaging craftsmen",
+        "text": "The district's most experienced craftsmen are selected and retrained at the NamSTU Faculty of Civil Engineering in modern construction technologies."
+      },
+      {
+        "title": "Mentor and apprentice",
+        "text": "Upskilled craftsmen become mentors, teaching young people hands-on skills on real construction sites."
+      },
+      {
+        "title": "Domestic market",
+        "text": "First, construction in the district and the region is staffed with professional builders holding diplomas."
+      },
+      {
+        "title": "Trade + language",
+        "text": "Alongside their trade, every builder learns a foreign language: German, Japanese, Korean or English."
+      },
+      {
+        "title": "International market",
+        "text": "Qualified builders are placed in developed countries under international agreements, with fair wages."
+      }
+    ],
+    "highlight": "Trade + language = a world-class professional builder."
+  },
+  "campus": {
+    "title": "Campus",
+    "intro": "The project is based in the building of the Faculty of Civil Engineering of Namangan State Technical University.",
+    "imageAlt": "Building of the Faculty of Civil Engineering, Namangan State Technical University",
+    "badge": "Uychi District",
+    "facts": [
+      {
+        "label": "Location",
+        "value": "Uychi District, Namangan Region"
+      },
+      {
+        "label": "Teaching building",
+        "value": "NamSTU Faculty of Civil Engineering"
+      },
+      {
+        "label": "Graduates receive",
+        "value": "A higher-education diploma"
+      }
+    ]
+  },
+  "trades": {
+    "title": "Core trades we teach",
+    "intro": "Every programme is practice-based: students learn by doing real work alongside their mentor.",
+    "labels": {
+      "description": "Description",
+      "skills": "Skills",
+      "countries": "Countries with demand",
+      "open": "Learn more",
+      "close": "Close",
+      "rotate": "Drag to rotate"
+    },
+    "items": [
+      {
+        "name": "Bricklayer",
+        "short": "A solid wall is the foundation of a safe home.",
+        "description": "Laying walls, columns and partitions from brick and block. Precise work with modern mortars and measuring tools.",
+        "skills": [
+          "Reading drawings",
+          "Working with a laser level",
+          "Bonding patterns",
+          "Health and safety"
+        ],
+        "countries": "Germany, South Korea, UAE"
+      },
+      {
+        "name": "Concrete worker",
+        "short": "From foundation to roof — a master of concrete work.",
+        "description": "Formwork preparation, pouring, compacting and curing concrete. Monolithic construction technologies.",
+        "skills": [
+          "Concrete grades",
+          "Vibration compaction",
+          "Formwork systems",
+          "Quality control"
+        ],
+        "countries": "Japan, South Korea, Singapore, UAE"
+      },
+      {
+        "name": "Welder",
+        "short": "Reliable joints for steel structures.",
+        "description": "Arc and semi-automatic welding. Steel frame and reinforcement work.",
+        "skills": [
+          "MMA/MIG welding",
+          "Weld quality control",
+          "Working to drawings",
+          "Fire safety"
+        ],
+        "countries": "Germany, Japan, South Korea, Singapore, UAE"
+      },
+      {
+        "name": "Electrician",
+        "short": "Safe, modern electrical networks.",
+        "description": "Installing a building's internal electrical networks to design, assembling switchboards, and lighting systems.",
+        "skills": [
+          "Wiring diagrams",
+          "Cable installation",
+          "Protective devices",
+          "Measuring instruments"
+        ],
+        "countries": "Germany, Japan, Singapore, UAE"
+      },
+      {
+        "name": "Plumber",
+        "short": "Water and heating systems — the heart of every home.",
+        "description": "Installing, repairing and testing water supply, drainage and heating pipework.",
+        "skills": [
+          "Polypropylene and metal pipes",
+          "Pressure testing",
+          "Heating boilers",
+          "Fault finding"
+        ],
+        "countries": "Germany, South Korea, UAE"
+      },
+      {
+        "name": "Tiler",
+        "short": "Precision and taste in every tile.",
+        "description": "Laying ceramic tiles, porcelain stoneware and mosaics on floors and walls. Modern adhesives and levelling systems.",
+        "skills": [
+          "Surface preparation",
+          "Levelling systems",
+          "Cutting and finishing",
+          "Grouting"
+        ],
+        "countries": "Germany, UAE, Singapore"
+      },
+      {
+        "name": "Carpenter",
+        "short": "Strong, beautiful structures in wood.",
+        "description": "Making and installing doors, window frames, roof structures and timber formwork.",
+        "skills": [
+          "Power tools",
+          "Roof structures",
+          "Door and window installation",
+          "Measuring and marking out"
+        ],
+        "countries": "Germany, Japan, South Korea"
+      },
+      {
+        "name": "Ganch carver (national craft)",
+        "short": "A thousand-year tradition in modern architecture.",
+        "description": "Uzbek national ganch (carved plaster) art: drawing ornaments, carving and decorating building interiors.",
+        "skills": [
+          "Girih and islimi ornaments",
+          "Preparing ganch",
+          "Carving techniques",
+          "Restoration"
+        ],
+        "countries": "Cultural sites in the UAE and other countries, restoration projects"
+      }
+    ]
+  },
+  "international": {
+    "title": "From Uychi to the world",
+    "intro": "Builders who master a trade and a language gain the opportunity to work as qualified specialists in developed countries.",
+    "globeAlt": "3D globe showing routes from Uychi District to Germany, Japan, South Korea, Singapore and the UAE",
+    "labels": {
+      "language": "Language",
+      "requirements": "Requirements",
+      "trades": "Trades in highest demand"
+    },
+    "countries": [
+      {
+        "name": "Germany",
+        "language": "German",
+        "requirements": "Recognition of vocational qualifications, language certificate",
+        "trades": "Welder, electrician, plumber, bricklayer"
+      },
+      {
+        "name": "Japan",
+        "language": "Japanese",
+        "requirements": "Language and occupational skills exams",
+        "trades": "Concrete worker, welder, carpenter"
+      },
+      {
+        "name": "South Korea",
+        "language": "Korean",
+        "requirements": "Language exam, employment programme",
+        "trades": "Concrete worker, welder, bricklayer"
+      },
+      {
+        "name": "Singapore",
+        "language": "English",
+        "requirements": "Trade certificate, work experience",
+        "trades": "Concrete worker, welder, electrician"
+      },
+      {
+        "name": "UAE",
+        "language": "English",
+        "requirements": "Trade certificate, work experience",
+        "trades": "All construction trades"
+      }
+    ],
+    "note": "Work on international agreements is under way. Labour migration is carried out in accordance with the legislation of Uzbekistan, through the authorised government bodies."
+  },
+  "results": {
+    "title": "Expected results",
+    "stats": [
+      "qualified builders trained",
+      "trades and specialisations",
+      "new jobs",
+      "international destinations",
+      "partner organisations",
+      "project phases"
+    ],
+    "note": "These figures are targets, planned to be achieved over the course of the project phases.",
+    "benefitsTitle": "What the project delivers",
+    "benefits": [
+      {
+        "title": "For residents",
+        "text": "Quality, safe construction and a well-paid profession."
+      },
+      {
+        "title": "For the district",
+        "text": "New jobs, growth of the construction sector and foreign currency inflows."
+      },
+      {
+        "title": "For the country",
+        "text": "Export of skilled labour and a strong international reputation for Uzbek builders."
+      }
+    ]
+  },
+  "roadmap": {
+    "title": "Project phases",
+    "phaseLabel": "Phase {{n}}",
+    "phases": [
+      {
+        "title": "Foundation",
+        "items": [
+          "Establishing the training centre",
+          "Selecting and retraining master craftsmen",
+          "First training groups",
+          "Curricula developed with NamSTU"
+        ]
+      },
+      {
+        "title": "Growth",
+        "items": [
+          "Launching language courses",
+          "Higher-education diplomas for graduates",
+          "Placing graduates in the domestic market",
+          "Made in Uychi showroom"
+        ]
+      },
+      {
+        "title": "International market",
+        "items": [
+          "International agreements",
+          "Placing builders abroad",
+          "Becoming a regional training centre"
+        ]
+      }
+    ]
+  },
+  "partners": {
+    "title": "Project partners",
+    "list": [
+      "Namangan State Technical University",
+      "Namangan Regional Administration",
+      "Uychi District Administration",
+      "IT Park Namangan Branch"
+    ],
+    "roles": [
+      "Curricula, qualified instructors and laboratory facilities",
+      "Regional-level support and coordination of the project",
+      "Organising the project and implementing it on the ground",
+      "Digital platform and modern technology solutions"
+    ],
+    "logoAlt": "{{name}} logo",
+    "initiatorBadge": "Project initiator"
+  },
+  "contact": {
+    "title": "Partner with the project",
+    "text": "We invite international organisations, construction companies and investors to partner with us.",
+    "form": {
+      "name": "Name",
+      "organization": "Organisation",
+      "phone": "Phone",
+      "message": "Message",
+      "required": "required",
+      "submit": "Send",
+      "sending": "Sending…",
+      "success": "Your message has been received",
+      "failed": "Your message could not be sent. Please try again.",
+      "again": "Send another message"
+    },
+    "errors": {
+      "name": "Please enter your name",
+      "phone": "Enter a phone number in the format +998 XX XXX XX XX",
+      "message": "Please enter a message"
+    },
+    "info": {
+      "title": "Get in touch",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "telegram": "Telegram"
+    }
+  },
+  "footer": {
+    "partners": "Partners",
+    "menu": "Menu",
+    "copyright": "© 2026 UYCHI BUILDERS. Namangan Region, Uychi District."
+  },
+  "common": {
+    "map": "View on map",
+    "newTab": "opens in a new tab"
+  }
+}
