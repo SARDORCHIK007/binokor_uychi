@@ -16,47 +16,31 @@ export function Hero() {
   const facts = useList<Fact>("hero.facts");
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Videoning boshi (0–2.5 s) va oxiri (73.5 s dan keyin) qora rangga o'tadi —
-  // shuning uchun faqat yorug' qismi to'xtovsiz aylantiriladi.
-  // "Harakatni kamaytirish" yoqilgan bo'lsa, video o'ynamaydi — faqat poster ko'rinadi.
+  // Fon videosi to'xtovsiz aylanadi (video fayl qora boshi/oxirisiz kesilgan, `loop`).
+  // Brauzer videoni to'xtatib qo'ysa (tab almashtirilganda, internet sekinlashganda) — davom ettiramiz.
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      v.removeAttribute("autoplay");
-      v.pause();
-      return;
-    }
-    const LOOP_START = 2.5;
-    const LOOP_END = 73.3;
+    v.muted = true; // ba'zi brauzerlar ovozsiz bo'lmasa avtomatik o'ynatmaydi
     const play = () => {
       if (document.visibilityState === "visible" && v.paused) v.play().catch(() => {});
     };
-    const toStart = () => {
-      v.currentTime = LOOP_START;
+    const restart = () => {
+      v.currentTime = 0;
       play();
     };
-    const onTime = () => {
-      if (v.currentTime >= LOOP_END || v.currentTime < LOOP_START - 0.5) toStart();
-    };
-    const onMeta = () => {
-      if (v.currentTime < LOOP_START) v.currentTime = LOOP_START;
-    };
-    if (v.readyState >= 1) onMeta();
-    v.addEventListener("loadedmetadata", onMeta);
-    v.addEventListener("timeupdate", onTime);
-    v.addEventListener("ended", toStart);
-    // Brauzer videoni to'xtatib qo'ysa (tab almashtirilganda, internet sekinlashganda) — davom ettiramiz
+    play();
+    v.addEventListener("canplay", play);
     v.addEventListener("pause", play);
     v.addEventListener("stalled", play);
+    v.addEventListener("ended", restart);
     document.addEventListener("visibilitychange", play);
-    const timer = window.setInterval(play, 3000);
+    const timer = window.setInterval(play, 2000);
     return () => {
-      v.removeEventListener("loadedmetadata", onMeta);
-      v.removeEventListener("timeupdate", onTime);
-      v.removeEventListener("ended", toStart);
+      v.removeEventListener("canplay", play);
       v.removeEventListener("pause", play);
       v.removeEventListener("stalled", play);
+      v.removeEventListener("ended", restart);
       document.removeEventListener("visibilitychange", play);
       window.clearInterval(timer);
     };
