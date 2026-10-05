@@ -412,5 +412,38 @@
   "about": {
     "title": "Biz haqimizda",
     "place": "Qurilish fakulteti"
+  },
+  "stats": {
+    "title": "Dastur raqamlarda",
+    "items": [
+      {
+        "value": "8",
+        "label": "qurilish kasbi"
+      },
+      {
+        "value": "5",
+        "label": "xorijiy davlat yo'nalishi"
+      },
+      {
+        "value": "4",
+        "label": "xorijiy til"
+      },
+      {
+        "value": "5",
+        "label": "bosqichli o'quv modeli"
+      }
+    ]
+  },
+  "gallery": {
+    "kicker": "Kasb va amaliyot",
+    "title": "Zamonaviy qurilish kasblari",
+    "intro": "Dastur ustalarni zamonaviy qurilish maydonlarida talab qilinadigan ishlarga — xavfsizlik qoidalari, zamonaviy asbob-uskunalar va texnologiyalar bilan ishlashga tayyorlaydi.",
+    "note": "Suratlar illyustrativ.",
+    "items": [
+      "Payvandlash ishlari",
+      "Beton ishlari",
+      "Monolit karkas qurilish",
+      "Balandlikda montaj ishlari"
+    ]
   }
 }

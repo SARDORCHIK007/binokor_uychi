@@ -4,6 +4,7 @@ import { Hero } from "./sections/Hero";
 import { QuickLinks } from "./sections/QuickLinks";
 import { About } from "./sections/About";
 import { Program } from "./sections/Program";
+import { Gallery } from "./sections/Gallery";
 import { Trades } from "./sections/Trades";
 import { International } from "./sections/International";
 import { Benefits } from "./sections/Benefits";
@@ -20,6 +21,7 @@ export default function App() {
         <QuickLinks />
         <About />
         <Program />
+        <Gallery />
         <Trades />
         <International />
         <Benefits />

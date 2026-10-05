@@ -38,7 +38,7 @@ export function QuickLinks() {
         <h2 id="quick-title" className="sr-only">
           {t("quick.title")}
         </h2>
-        <ul className="grid gap-3 xs:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, i) => {
             const link = LINKS[i];
             if (!link) return null;

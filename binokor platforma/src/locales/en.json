@@ -412,5 +412,38 @@
   "about": {
     "title": "About us",
     "place": "Faculty of Civil Engineering"
+  },
+  "stats": {
+    "title": "The programme in numbers",
+    "items": [
+      {
+        "value": "8",
+        "label": "construction trades"
+      },
+      {
+        "value": "5",
+        "label": "destination countries"
+      },
+      {
+        "value": "4",
+        "label": "foreign languages"
+      },
+      {
+        "value": "5",
+        "label": "step training model"
+      }
+    ]
+  },
+  "gallery": {
+    "kicker": "Trades and practice",
+    "title": "Modern construction trades",
+    "intro": "The programme prepares craftsmen for the work modern construction sites demand — safety rules, modern tools and technologies.",
+    "note": "Photos are illustrative.",
+    "items": [
+      "Welding",
+      "Concrete works",
+      "Reinforced-concrete frame construction",
+      "Work at height"
+    ]
   }
 }

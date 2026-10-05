@@ -90,6 +90,10 @@ Fayl: `src/data/partners.ts`
 - **Bosh sahifa fon videosi** — `public/video/hero.mp4` (ovozsiz, takrorlanadi) va
   `public/video/hero-poster.webp` (video yuklanguncha ko'rinadigan kadr). Almashtirish uchun
   shu nomdagi fayllarni almashtiring; video hajmi 10 MB dan oshmagani ma'qul.
+- **"Zamonaviy qurilish kasblari" suratlari** — `public/gallery/` (welding, concrete, site, lift.webp;
+  fon videosidan olingan kadrlar). Sarlavhalari — `gallery.items`. Haqiqiy suratlar bo'lsa, shu
+  nomdagi fayllarni almashtiring.
+- **Asosiy raqamlar** (bosh ekran ostidagi oq panel) — `stats.items` (uz.json / en.json).
 - **Telegram'da havola rasmi** — `public/og-image.jpg` (1200×630).
 
 Hozir ko'rsatilmayotgan, lekin saqlab qo'yilgan materiallar (tasdiqlangach yoqiladi):
