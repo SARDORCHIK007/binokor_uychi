@@ -1,8 +1,6 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { AnimatePresence, m } from "framer-motion";
 import { X } from "lucide-react";
-import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 interface Props {
   open: boolean;
@@ -18,19 +16,16 @@ const FOCUSABLE =
 
 /**
  * Modal oyna: Esc bilan yopiladi, fokus ichida aylanadi, yopilganda fokus
- * ochgan tugmaga qaytadi, orqa sahifa scroll qilinmaydi. Fon — solid (blur yo'q).
+ * ochgan tugmaga qaytadi, orqa sahifa scroll qilinmaydi.
  */
 export function Modal({ open, onClose, labelledBy, closeLabel, children }: Props) {
-  const reduced = useReducedMotion();
   const panel = useRef<HTMLDivElement>(null);
   const closeBtn = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!open) return;
     const previous = document.activeElement as HTMLElement | null;
-    const scrollbar = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
-    document.body.style.paddingRight = `${scrollbar}px`;
     closeBtn.current?.focus();
 
     const onKey = (e: KeyboardEvent) => {
@@ -56,49 +51,38 @@ export function Modal({ open, onClose, labelledBy, closeLabel, children }: Props
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
       previous?.focus();
     };
   }, [open, onClose]);
 
+  if (!open) return null;
+
   return createPortal(
-    <AnimatePresence>
-      {open && (
-        <m.div
-          className="fixed inset-0 z-[70] flex items-end justify-center bg-ink/90 p-0 md:items-center md:p-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: reduced ? 0 : 0.2 }}
-          onMouseDown={(e) => {
-            if (e.target === e.currentTarget) onClose();
-          }}
+    <div
+      className="fixed inset-0 z-[70] flex items-end justify-center bg-ink/50 md:items-center md:p-6"
+      onMouseDown={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      <div
+        ref={panel}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={labelledBy}
+        className="relative max-h-[90svh] w-full max-w-[720px] overflow-y-auto rounded-t-card bg-white shadow-card-hover md:rounded-card"
+      >
+        <button
+          ref={closeBtn}
+          type="button"
+          onClick={onClose}
+          aria-label={closeLabel}
+          className="absolute right-3 top-3 rounded-md p-2 text-muted hover:bg-soft hover:text-ink"
         >
-          <m.div
-            ref={panel}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby={labelledBy}
-            className="relative max-h-[92svh] w-full max-w-[1040px] overflow-y-auto rounded-t-card border border-line bg-surface text-white shadow-card-hover md:rounded-card"
-            initial={reduced ? false : { opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={reduced ? undefined : { opacity: 0, y: 24 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-          >
-            <button
-              ref={closeBtn}
-              type="button"
-              onClick={onClose}
-              aria-label={closeLabel}
-              className="absolute right-3 top-3 z-10 rounded-full border border-line-strong bg-ink p-2 text-white transition-colors hover:border-amber hover:text-amber"
-            >
-              <X className="h-5 w-5" aria-hidden="true" />
-            </button>
-            {children}
-          </m.div>
-        </m.div>
-      )}
-    </AnimatePresence>,
+          <X className="h-5 w-5" aria-hidden="true" />
+        </button>
+        {children}
+      </div>
+    </div>,
     document.body,
   );
 }

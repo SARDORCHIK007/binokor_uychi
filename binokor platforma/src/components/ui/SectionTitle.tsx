@@ -1,31 +1,20 @@
-import { m } from "framer-motion";
-import { useReducedMotion } from "../../hooks/useReducedMotion";
-
 interface Props {
   id: string;
   children: string;
   intro?: string;
-  /** Sarlavha ustidagi kichik belgi, masalan "01 — Loyiha" */
-  eyebrow?: string;
-  center?: boolean;
+  /** Sarlavha ustidagi kichik belgi */
+  kicker?: string;
 }
 
-export function SectionTitle({ id, children, intro, eyebrow, center = false }: Props) {
-  const reduced = useReducedMotion();
+/** Bo'lim sarlavhasi: chap tomonda ko'k chiziq, ostida qisqa izoh. */
+export function SectionTitle({ id, children, intro, kicker }: Props) {
   return (
-    <div className={`mb-12 max-w-3xl lg:mb-16 ${center ? "mx-auto text-center" : ""}`}>
-      {eyebrow && <p className={`eyebrow mb-5 ${center ? "justify-center" : ""}`}>{eyebrow}</p>}
-      <m.h2
-        id={id}
-        className="text-h2 text-white lg:text-h2-lg"
-        initial={reduced ? false : { opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
+    <div className="mb-8 max-w-3xl lg:mb-10">
+      {kicker && <p className="kicker">{kicker}</p>}
+      <h2 id={id} className="border-l-4 border-brand pl-4 text-h2 lg:text-h2-lg">
         {children}
-      </m.h2>
-      {intro && <p className="mt-5 max-w-2xl text-muted lg:text-[19px]">{intro}</p>}
+      </h2>
+      {intro && <p className="mt-4 text-muted lg:text-[17px]">{intro}</p>}
     </div>
   );
 }

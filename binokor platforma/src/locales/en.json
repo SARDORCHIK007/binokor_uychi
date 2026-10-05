@@ -1,42 +1,56 @@
 {
   "brand": {
     "name": "UYCHI BUILDERS",
-    "sub": "Construction Skills Academy",
+    "university": "Namangan State Technical University",
+    "location": "Uychi District",
+    "program": "From Uychi to the World",
     "slogan": "From Uychi to the world — professional builders"
   },
   "nav": {
-    "project": "Project",
-    "model": "Model",
+    "about": "About us",
+    "program": "Programme",
     "trades": "Trades",
     "international": "International",
-    "results": "Results",
+    "roadmap": "Roadmap",
     "partners": "Partners",
     "contact": "Contact",
-    "roadmap": "Roadmap",
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
     "toTop": "Back to top",
     "langLabel": "Choose language",
-    "main": "Main menu",
-    "campus": "Campus"
+    "main": "Main menu"
   },
   "hero": {
-    "eyebrow": "NAMANGAN REGION · UYCHI DISTRICT",
-    "title": "UYCHI BUILDERS",
     "subtitle": "From Uychi to the world — professional builders",
-    "ctaPrimary": "Explore the project",
-    "ctaSecondary": "Become a partner",
-    "sceneAlt": "3D illustration of a building under construction: a crane sets the floors in place one by one",
-    "initiatorLabel": "Project initiator",
+    "ctaPrimary": "Explore the programme",
+    "ctaSecondary": "Send an enquiry",
     "initiator": "Namangan State Technical University",
-    "goalLabel": "Project goal",
-    "goal": "To train craftsmen and young people of Uychi District in modern construction trades and prepare them — with a higher-education diploma and a foreign language — for the domestic and international markets.",
-    "locationLabel": "Campus",
+    "goalLabel": "Programme goal",
+    "goal": "To train craftsmen and young people of Uychi District in modern construction trades and a foreign language, preparing them for the domestic and international labour markets.",
     "location": "NamSTU Faculty of Civil Engineering, Uychi District",
-    "partnersLabel": "Partners"
+    "kicker": "An initiative of Namangan State Technical University",
+    "factsTitle": "Key facts",
+    "facts": [
+      {
+        "label": "Initiator",
+        "value": "Namangan State Technical University"
+      },
+      {
+        "label": "Campus",
+        "value": "Faculty of Civil Engineering, Uychi District"
+      },
+      {
+        "label": "Trades",
+        "value": "8 construction trades"
+      },
+      {
+        "label": "Foreign languages",
+        "value": "German, Japanese, Korean, English"
+      }
+    ]
   },
   "problem": {
-    "title": "Why is this project needed?",
+    "title": "Why is this programme needed?",
     "intro": "Uychi District has a strong building tradition and many skilled craftsmen. Yet their potential is not being fully realised.",
     "cards": [
       {
@@ -55,7 +69,7 @@
   },
   "model": {
     "title": "From craftsman to the global market",
-    "intro": "The project runs on a five-stage chain. Each stage lays the foundation for the next.",
+    "intro": "The programme runs on a five-stage chain. Each stage lays the foundation for the next.",
     "steps": [
       {
         "title": "Engaging craftsmen",
@@ -67,7 +81,7 @@
       },
       {
         "title": "Domestic market",
-        "text": "First, construction in the district and the region is staffed with professional builders holding diplomas."
+        "text": "First, construction in the district and the region is staffed with professional builders whose qualifications are officially recognised."
       },
       {
         "title": "Trade + language",
@@ -82,7 +96,7 @@
   },
   "campus": {
     "title": "Campus",
-    "intro": "The project is based in the building of the Faculty of Civil Engineering of Namangan State Technical University.",
+    "intro": "The Faculty of Civil Engineering of Namangan State Technical University is located in Uychi District. The faculty hosts a programme to train construction professionals.",
     "imageAlt": "Building of the Faculty of Civil Engineering, Namangan State Technical University",
     "badge": "Uychi District",
     "facts": [
@@ -108,8 +122,7 @@
       "skills": "Skills",
       "countries": "Countries with demand",
       "open": "Learn more",
-      "close": "Close",
-      "rotate": "Drag to rotate"
+      "close": "Close"
     },
     "items": [
       {
@@ -211,10 +224,10 @@
     ]
   },
   "international": {
-    "title": "From Uychi to the world",
+    "title": "International cooperation",
     "intro": "Builders who master a trade and a language gain the opportunity to work as qualified specialists in developed countries.",
-    "globeAlt": "3D globe showing routes from Uychi District to Germany, Japan, South Korea, Singapore and the UAE",
     "labels": {
+      "country": "Country",
       "language": "Language",
       "requirements": "Requirements",
       "trades": "Trades in highest demand"
@@ -264,7 +277,7 @@
       "project phases"
     ],
     "note": "These figures are targets, planned to be achieved over the course of the project phases.",
-    "benefitsTitle": "What the project delivers",
+    "benefitsTitle": "What the programme delivers",
     "benefits": [
       {
         "title": "For residents",
@@ -281,7 +294,7 @@
     ]
   },
   "roadmap": {
-    "title": "Project phases",
+    "title": "Programme phases",
     "phaseLabel": "Phase {{n}}",
     "phases": [
       {
@@ -297,7 +310,7 @@
         "title": "Growth",
         "items": [
           "Launching language courses",
-          "Higher-education diplomas for graduates",
+          "Official recognition of graduates' qualifications",
           "Placing graduates in the domestic market",
           "Made in Uychi showroom"
         ]
@@ -313,7 +326,7 @@
     ]
   },
   "partners": {
-    "title": "Project partners",
+    "title": "Programme partners",
     "list": [
       "Namangan State Technical University",
       "Namangan Regional Administration",
@@ -322,15 +335,15 @@
     ],
     "roles": [
       "Curricula, qualified instructors and laboratory facilities",
-      "Regional-level support and coordination of the project",
-      "Organising the project and implementing it on the ground",
+      "Regional-level support and coordination of the programme",
+      "Organising the programme and implementing it on the ground",
       "Digital platform and modern technology solutions"
     ],
     "logoAlt": "{{name}} logo",
-    "initiatorBadge": "Project initiator"
+    "initiatorBadge": "Initiator"
   },
   "contact": {
-    "title": "Partner with the project",
+    "title": "Partner with the programme",
     "text": "We invite international organisations, construction companies and investors to partner with us.",
     "form": {
       "name": "Name",
@@ -355,15 +368,49 @@
       "phone": "Phone",
       "email": "Email",
       "telegram": "Telegram"
-    }
+    },
+    "noForm": "For enquiries, please use the address and contact details below."
   },
   "footer": {
     "partners": "Partners",
     "menu": "Menu",
-    "copyright": "© 2026 UYCHI BUILDERS. Namangan Region, Uychi District."
+    "copyright": "© 2026 UYCHI BUILDERS. Initiator: Namangan State Technical University. Uychi District."
   },
   "common": {
     "map": "View on map",
     "newTab": "opens in a new tab"
+  },
+  "quick": {
+    "title": "Quick links",
+    "items": [
+      {
+        "title": "Trades",
+        "text": "8 construction trades we teach"
+      },
+      {
+        "title": "Programme",
+        "text": "From craftsman to the global market: 5 stages"
+      },
+      {
+        "title": "International",
+        "text": "Germany, Japan, Korea, Singapore, UAE"
+      },
+      {
+        "title": "Roadmap",
+        "text": "From launch to the international market"
+      },
+      {
+        "title": "Partners",
+        "text": "Regional and district administrations, IT Park"
+      },
+      {
+        "title": "Location",
+        "text": "The faculty on the map"
+      }
+    ]
+  },
+  "about": {
+    "title": "About us",
+    "place": "Faculty of Civil Engineering"
   }
 }

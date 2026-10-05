@@ -58,7 +58,7 @@ export const FLAG_CODES = ["de", "jp", "kr", "sg", "ae"] as const;
 
 export function Flag({ code, className = "h-5 w-[30px]" }: { code: string; className?: string }) {
   return (
-    <svg viewBox="0 0 30 20" className={`shrink-0 overflow-hidden rounded-[3px] ring-1 ring-white/20 ${className}`} aria-hidden="true">
+    <svg viewBox="0 0 30 20" className={`shrink-0 overflow-hidden rounded-[2px] ring-1 ring-line ${className}`} aria-hidden="true">
       {FLAGS[code]}
     </svg>
   );

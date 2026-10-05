@@ -1,48 +1,50 @@
+import { fileURLToPath } from "node:url";
+
+const here = (p) => fileURLToPath(new URL(p, import.meta.url)).replace(/\\/g, "/");
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  content: [here("./index.html"), here("./src/**/*.{ts,tsx}")],
   theme: {
     screens: {
       xs: "360px",
       md: "768px",
       lg: "1024px",
-      xl: "1440px",
+      xl: "1280px",
     },
     extend: {
       colors: {
-        // To'q premium palitra
-        ink: "#070D18", // asosiy fon
-        deep: "#0A1220", // ko'tarilgan bo'limlar foni
-        surface: { DEFAULT: "#0D1626", 2: "#132036" }, // kartochkalar, ko'tarilgan bo'limlar
-        line: { DEFAULT: "#1D2A42", strong: "#2A3A57" }, // chegara chiziqlari
-        muted: "#9AA6B8", // ikkinchi darajali matn (ink ustida kontrast ~7.9:1)
-        navy: { DEFAULT: "#0B1F3A", 700: "#13305A" },
-        amber: { DEFAULT: "#F5A623", 600: "#D98C0A", soft: "#2A2012" },
-        concrete: "#8A939E",
-        paper: "#F2F4F7",
+        // Rasmiy palitra (davlat va universitet saytlari uslubi)
+        brand: {
+          DEFAULT: "#0F4C81", // asosiy ko'k
+          600: "#0D426F",
+          700: "#0A365C", // header usti paneli, footer
+          50: "#EEF4FA",
+          100: "#DCE8F4",
+        },
+        gold: { DEFAULT: "#B8862B", 50: "#FBF5EA" }, // kichik urg'ular
+        ink: "#0F172A", // asosiy matn
+        muted: "#475569", // ikkinchi darajali matn (oq fonda kontrast ~7.5:1)
+        line: "#E2E8F0", // chegara chiziqlari
+        soft: "#F5F7FA", // och kulrang bo'limlar
         white: "#FFFFFF",
-        brick: "#B5562F",
-        steel: "#5F6B78",
-        wood: "#A9743F",
       },
       fontFamily: {
         heading: ["Montserrat", "system-ui", "sans-serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       fontSize: {
-        h1: ["40px", { lineHeight: "1.05", fontWeight: "800", letterSpacing: "-0.02em" }],
-        "h1-lg": ["84px", { lineHeight: "0.98", fontWeight: "800", letterSpacing: "-0.03em" }],
-        h2: ["30px", { lineHeight: "1.15", fontWeight: "800", letterSpacing: "-0.015em" }],
-        "h2-lg": ["52px", { lineHeight: "1.08", fontWeight: "800", letterSpacing: "-0.025em" }],
-        h3: ["20px", { lineHeight: "1.3", fontWeight: "700" }],
-        "h3-lg": ["24px", { lineHeight: "1.3", fontWeight: "700" }],
+        h1: ["30px", { lineHeight: "1.2", fontWeight: "700" }],
+        "h1-lg": ["44px", { lineHeight: "1.15", fontWeight: "700" }],
+        h2: ["24px", { lineHeight: "1.25", fontWeight: "700" }],
+        "h2-lg": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+        h3: ["18px", { lineHeight: "1.35", fontWeight: "700" }],
         body: ["16px", { lineHeight: "1.65" }],
-        "body-lg": ["18px", { lineHeight: "1.65" }],
       },
-      borderRadius: { card: "20px" },
+      borderRadius: { card: "12px" },
       boxShadow: {
-        card: "0 1px 0 rgba(255,255,255,.04) inset, 0 12px 32px rgba(0,0,0,.35)",
-        "card-hover": "0 1px 0 rgba(255,255,255,.06) inset, 0 18px 44px rgba(0,0,0,.5)",
+        card: "0 1px 2px rgba(15,23,42,.06), 0 1px 3px rgba(15,23,42,.04)",
+        "card-hover": "0 6px 18px rgba(15,23,42,.08)",
       },
       maxWidth: { content: "1200px" },
     },

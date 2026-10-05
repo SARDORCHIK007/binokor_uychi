@@ -1,38 +1,33 @@
-interface Props {
-  className?: string;
-}
+import { useTranslation } from "react-i18next";
 
-/**
- * Logotip belgisi: amber kvadrat ichida "U" harfi, o'ng tomoni minorali kranga
- * aylanadi (strela va ilgak). Nom (Uychi) va soha (qurilish) bitta belgida.
- */
-export function LogoMark({ className = "h-9 w-9" }: Props) {
+/** Namangan davlat texnika universiteti logotipi (`public/partners/namdtu.webp`). */
+export function LogoMark({ className = "h-12 w-12" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-      <rect width="48" height="48" rx="13" fill="#F5A623" />
-      {/* Kran strelasi */}
-      <path d="M9 12.5H39" stroke="#070D18" strokeWidth="4" strokeLinecap="round" />
-      {/* U harfi — o'ng ustuni kran minorasi */}
-      <path
-        d="M16 19v9.5a8 8 0 0 0 16 0V12.5"
-        fill="none"
-        stroke="#070D18"
-        strokeWidth="5"
-        strokeLinecap="round"
-      />
-      {/* Tros va ilgak */}
-      <path d="M20 12.5v4.5" stroke="#070D18" strokeWidth="2.4" strokeLinecap="round" />
-      <rect x="18" y="17" width="4" height="3.2" rx="0.8" fill="#070D18" />
-    </svg>
+    <img
+      src="/partners/namdtu.webp"
+      width={360}
+      height={360}
+      alt=""
+      aria-hidden="true"
+      className={`shrink-0 rounded-full bg-white object-contain ${className}`}
+    />
   );
 }
 
-export function Logo({ className = "" }: Props) {
+export function Logo({ inverted = false }: { inverted?: boolean }) {
+  const { t } = useTranslation();
   return (
-    <span className={`flex items-center gap-2.5 ${className}`}>
-      <LogoMark />
-      <span className="font-heading text-[17px] font-extrabold leading-none tracking-[-0.01em] text-white">
-        UYCHI<span className="text-amber"> BUILDERS</span>
+    <span className="flex items-center gap-3">
+      <LogoMark className={inverted ? "h-14 w-14 p-0.5" : "h-12 w-12"} />
+      <span className="leading-tight">
+        <span
+          className={`block font-heading text-[18px] font-extrabold tracking-[-0.01em] ${inverted ? "text-white" : "text-ink"}`}
+        >
+          UYCHI<span className={inverted ? "text-[#F5A623]" : "text-brand"}> BUILDERS</span>
+        </span>
+        <span className={`block text-[12px] ${inverted ? "text-white/75" : "text-muted"}`}>
+          {t("brand.university")}
+        </span>
       </span>
     </span>
   );

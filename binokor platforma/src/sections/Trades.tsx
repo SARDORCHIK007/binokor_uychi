@@ -1,13 +1,23 @@
 import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { m } from "framer-motion";
+import {
+  BrickWall,
+  CheckCircle2,
+  ChevronRight,
+  Construction,
+  Droplets,
+  Flame,
+  Gem,
+  Globe2,
+  Grid3x3,
+  Hammer,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+import { Modal } from "../components/ui/Modal";
 import { Section } from "../components/ui/Section";
 import { SectionTitle } from "../components/ui/SectionTitle";
 import { useList } from "../hooks/useList";
-import { useReducedMotion } from "../hooks/useReducedMotion";
-import { ArrowRight } from "lucide-react";
-import { TradeVisual } from "../components/three/trades/TradeVisual";
-import { TradeModal } from "./TradeModal";
 
 export interface Trade {
   name: string;
@@ -17,71 +27,80 @@ export interface Trade {
   countries: string;
 }
 
+/** Tartib `trades.items` bilan bir xil */
+const ICONS: LucideIcon[] = [BrickWall, Construction, Flame, Zap, Droplets, Grid3x3, Hammer, Gem];
+
 export function Trades() {
   const { t } = useTranslation();
   const trades = useList<Trade>("trades.items");
-  const reduced = useReducedMotion();
   const [selected, setSelected] = useState<number | null>(null);
   const close = useCallback(() => setSelected(null), []);
+  const trade = selected === null ? null : trades[selected];
+  const SelectedIcon = selected === null ? null : ICONS[selected];
 
   return (
-    <Section id="trades" tone="raised">
-      <SectionTitle id="trades-title" eyebrow={`04 — ${t("nav.trades")}`} intro={t("trades.intro")}>
+    <Section id="trades" tone="white">
+      <SectionTitle id="trades-title" intro={t("trades.intro")}>
         {t("trades.title")}
       </SectionTitle>
-      {/* Mobil: gorizontal surilma (snap); planshet 2 ustun; desktop 4 ustun */}
-      <ul className="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pb-4 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-4">
-        {trades.map((trade, i) => (
-          <m.li
-            key={trade.name}
-            className="w-[78%] shrink-0 snap-start md:w-auto"
-            initial={reduced ? false : { opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
-          >
-            <TradeCard trade={trade} index={i} paused={selected !== null} onOpen={() => setSelected(i)} />
-          </m.li>
-        ))}
-      </ul>
-      <TradeModal trade={selected === null ? null : trades[selected]} index={selected ?? 0} onClose={close} />
-    </Section>
-  );
-}
 
-function TradeCard({
-  trade,
-  index,
-  paused,
-  onOpen,
-}: {
-  trade: Trade;
-  index: number;
-  paused: boolean;
-  onOpen: () => void;
-}) {
-  const { t } = useTranslation();
-  const [hovered, setHovered] = useState(false);
-  return (
-    <button
-      type="button"
-      onClick={onOpen}
-      aria-haspopup="dialog"
-      className="card-dark card-dark-hover group flex h-full w-full flex-col overflow-hidden text-left"
-      onPointerEnter={() => setHovered(true)}
-      onPointerLeave={() => setHovered(false)}
-      onFocus={() => setHovered(true)}
-      onBlur={() => setHovered(false)}
-    >
-      <TradeVisual index={index} hovered={hovered} paused={paused} label={trade.name} />
-      <span className="flex flex-1 flex-col p-5">
-        <span className="mb-2 font-heading text-h3 text-white">{trade.name}</span>
-        <span className="text-[15px] text-muted">{trade.short}</span>
-        <span className="mt-auto flex items-center gap-1.5 pt-5 text-sm font-bold text-amber">
-          {t("trades.labels.open")}
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-        </span>
-      </span>
-    </button>
+      <ul className="grid gap-4 xs:grid-cols-2 lg:grid-cols-4">
+        {trades.map((tr, i) => {
+          const Icon = ICONS[i] ?? Hammer;
+          return (
+            <li key={tr.name}>
+              <button
+                type="button"
+                onClick={() => setSelected(i)}
+                aria-haspopup="dialog"
+                className="card card-link group flex h-full w-full flex-col p-5 text-left"
+              >
+                <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-50 text-brand">
+                  <Icon className="h-6 w-6" aria-hidden="true" />
+                </span>
+                <span className="mb-1.5 font-heading text-[16px] font-bold text-ink">{tr.name}</span>
+                <span className="text-[14px] text-muted">{tr.short}</span>
+                <span className="mt-auto inline-flex items-center gap-1 pt-4 text-[14px] font-medium text-brand group-hover:underline">
+                  {t("trades.labels.open")}
+                  <ChevronRight className="h-4 w-4" aria-hidden="true" />
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+
+      <Modal open={trade !== null} onClose={close} labelledBy="trade-modal-title" closeLabel={t("trades.labels.close")}>
+        {trade && SelectedIcon && (
+          <div className="p-6 md:p-8">
+            <div className="mb-5 flex items-center gap-4 pr-10">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand">
+                <SelectedIcon className="h-6 w-6" aria-hidden="true" />
+              </span>
+              <h3 id="trade-modal-title" className="text-[22px]">
+                {trade.name}
+              </h3>
+            </div>
+            <p className="mb-6 text-muted">{trade.description}</p>
+
+            <h4 className="kicker">{t("trades.labels.skills")}</h4>
+            <ul className="mb-6 grid gap-2 md:grid-cols-2">
+              {trade.skills.map((s) => (
+                <li key={s} className="flex items-start gap-2 text-[15px]">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+                  {s}
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="kicker">{t("trades.labels.countries")}</h4>
+            <p className="flex items-start gap-2 rounded-lg bg-soft p-4 text-[15px]">
+              <Globe2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+              {trade.countries}
+            </p>
+          </div>
+        )}
+      </Modal>
+    </Section>
   );
 }

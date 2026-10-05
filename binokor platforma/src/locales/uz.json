@@ -1,42 +1,56 @@
 {
   "brand": {
     "name": "UYCHI BUILDERS",
-    "sub": "Construction Skills Academy",
+    "university": "Namangan davlat texnika universiteti",
+    "location": "Uychi tumani",
+    "program": "Uychidan dunyoga",
     "slogan": "Uychidan dunyoga — professional ustalar"
   },
   "nav": {
-    "project": "Loyiha",
-    "model": "Model",
-    "trades": "Kasblar",
-    "international": "Xalqaro",
-    "results": "Natijalar",
+    "about": "Biz haqimizda",
+    "program": "Dastur",
+    "trades": "Yo'nalishlar",
+    "international": "Xalqaro hamkorlik",
+    "roadmap": "Bosqichlar",
     "partners": "Hamkorlar",
     "contact": "Aloqa",
-    "roadmap": "Bosqichlar",
     "menuOpen": "Menyuni ochish",
     "menuClose": "Menyuni yopish",
     "toTop": "Sahifa boshiga qaytish",
     "langLabel": "Tilni tanlash",
-    "main": "Asosiy menyu",
-    "campus": "O'quv maskani"
+    "main": "Asosiy menyu"
   },
   "hero": {
-    "eyebrow": "NAMANGAN VILOYATI · UYCHI TUMANI",
-    "title": "UYCHI BUILDERS",
     "subtitle": "Uychidan dunyoga — professional ustalar",
-    "ctaPrimary": "Loyiha bilan tanishish",
-    "ctaSecondary": "Hamkor bo'lish",
-    "sceneAlt": "Qurilayotgan binoning 3D tasviri: kran qavatlarni birma-bir o'rnatadi",
-    "initiatorLabel": "Loyiha tashabbuskori",
+    "ctaPrimary": "Dastur bilan tanishish",
+    "ctaSecondary": "Murojaat yuborish",
     "initiator": "Namangan davlat texnika universiteti",
-    "goalLabel": "Loyiha maqsadi",
-    "goal": "Uychi tumani ustalari va yoshlarini zamonaviy qurilish kasblariga o'qitib, oliy ma'lumot diplomi va xorijiy til bilan ichki hamda xalqaro bozorga tayyorlash.",
-    "locationLabel": "O'quv maskani",
+    "goalLabel": "Dastur maqsadi",
+    "goal": "Uychi tumani ustalari va yoshlarini zamonaviy qurilish kasblari hamda xorijiy tilga o'qitib, ichki va xalqaro mehnat bozoriga tayyorlash.",
     "location": "NamDTU Qurilish fakulteti, Uychi tumani",
-    "partnersLabel": "Hamkorlar"
+    "kicker": "Namangan davlat texnika universiteti tashabbusi",
+    "factsTitle": "Asosiy ma'lumotlar",
+    "facts": [
+      {
+        "label": "Tashabbuskor",
+        "value": "Namangan davlat texnika universiteti"
+      },
+      {
+        "label": "O'quv maskani",
+        "value": "Qurilish fakulteti, Uychi tumani"
+      },
+      {
+        "label": "Yo'nalishlar",
+        "value": "8 ta qurilish kasbi"
+      },
+      {
+        "label": "Xorijiy tillar",
+        "value": "Nemis, yapon, koreys, ingliz"
+      }
+    ]
   },
   "problem": {
-    "title": "Nega bu loyiha kerak?",
+    "title": "Nega bu dastur kerak?",
     "intro": "Uychi tumanida qurilish an'anasi kuchli, ustalar ko'p. Ammo ularning salohiyati to'liq ishlatilmayapti.",
     "cards": [
       {
@@ -55,7 +69,7 @@
   },
   "model": {
     "title": "Ustadan — dunyo bozorigacha",
-    "intro": "Loyiha 5 bosqichli zanjir asosida ishlaydi. Har bir bosqich keyingisi uchun poydevor bo'ladi.",
+    "intro": "Dastur 5 bosqichli zanjir asosida ishlaydi. Har bir bosqich keyingisi uchun poydevor bo'ladi.",
     "steps": [
       {
         "title": "Ustalarni jalb qilish",
@@ -67,7 +81,7 @@
       },
       {
         "title": "Ichki bozor",
-        "text": "Birinchi navbatda tuman va viloyat qurilishi professional, diplomli ustalar bilan ta'minlanadi."
+        "text": "Birinchi navbatda tuman va viloyat qurilishi malakasi rasman tasdiqlangan professional ustalar bilan ta'minlanadi."
       },
       {
         "title": "Hunar + til",
@@ -82,7 +96,7 @@
   },
   "campus": {
     "title": "O'quv maskani",
-    "intro": "Loyiha Namangan davlat texnika universiteti Qurilish fakulteti binosida tashkil etiladi.",
+    "intro": "Namangan davlat texnika universiteti Qurilish fakulteti Uychi tumanida joylashgan. Fakultet qoshida qurilish ustalarini tayyorlash dasturi tashkil etiladi.",
     "imageAlt": "Namangan davlat texnika universiteti Qurilish fakulteti binosi",
     "badge": "Uychi tumani",
     "facts": [
@@ -108,8 +122,7 @@
       "skills": "Ko'nikmalar",
       "countries": "Talab bor davlatlar",
       "open": "Batafsil",
-      "close": "Yopish",
-      "rotate": "Aylantirish uchun suring"
+      "close": "Yopish"
     },
     "items": [
       {
@@ -211,10 +224,10 @@
     ]
   },
   "international": {
-    "title": "Uychidan dunyoga",
+    "title": "Xalqaro hamkorlik yo'nalishlari",
     "intro": "Hunar va tilni egallagan ustalar rivojlangan davlatlarda malakali mutaxassis sifatida ishlash imkoniyatiga ega bo'ladi.",
-    "globeAlt": "Uychi tumanidan Germaniya, Yaponiya, Janubiy Koreya, Singapur va BAAga yo'nalishlar ko'rsatilgan 3D globus",
     "labels": {
+      "country": "Davlat",
       "language": "Til",
       "requirements": "Talablar",
       "trades": "Asosiy talab bor kasblar"
@@ -264,7 +277,7 @@
       "loyiha bosqichlari"
     ],
     "note": "Ko'rsatkichlar maqsadli bo'lib, loyiha bosqichlari davomida erishilishi rejalashtirilgan.",
-    "benefitsTitle": "Loyiha nimani beradi",
+    "benefitsTitle": "Dastur nimani beradi",
     "benefits": [
       {
         "title": "Aholi uchun",
@@ -281,7 +294,7 @@
     ]
   },
   "roadmap": {
-    "title": "Loyiha bosqichlari",
+    "title": "Dastur bosqichlari",
     "phaseLabel": "{{n}}-bosqich",
     "phases": [
       {
@@ -297,7 +310,7 @@
         "title": "O'sish",
         "items": [
           "Til kurslarini yo'lga qo'yish",
-          "Bitiruvchilarga oliy ma'lumot diplomi",
+          "Bitiruvchilar malakasini rasman tasdiqlash",
           "Bitiruvchilarni ichki bozorga chiqarish",
           "Made in Uychi showroom"
         ]
@@ -313,7 +326,7 @@
     ]
   },
   "partners": {
-    "title": "Loyiha hamkorlari",
+    "title": "Dastur hamkorlari",
     "list": [
       "Namangan davlat texnika universiteti",
       "Namangan viloyati hokimligi",
@@ -322,15 +335,15 @@
     ],
     "roles": [
       "O'quv dasturlari, malakali o'qituvchilar va laboratoriya bazasi",
-      "Loyihani viloyat darajasida qo'llab-quvvatlash va muvofiqlashtirish",
-      "Loyihani tashkil etish va joyida amalga oshirish",
+      "Dasturni viloyat darajasida qo'llab-quvvatlash va muvofiqlashtirish",
+      "Dasturni tashkil etish va joyida amalga oshirish",
       "Raqamli platforma va zamonaviy texnologik yechimlar"
     ],
     "logoAlt": "{{name}} logotipi",
-    "initiatorBadge": "Loyiha tashabbuskori"
+    "initiatorBadge": "Tashabbuskor"
   },
   "contact": {
-    "title": "Loyihaga hamkor bo'ling",
+    "title": "Dasturga hamkor bo'ling",
     "text": "Xalqaro tashkilotlar, qurilish kompaniyalari va investorlarni hamkorlikka taklif qilamiz.",
     "form": {
       "name": "Ism",
@@ -355,15 +368,49 @@
       "phone": "Telefon",
       "email": "Email",
       "telegram": "Telegram"
-    }
+    },
+    "noForm": "Murojaatlar uchun quyidagi manzil va aloqa ma'lumotlaridan foydalaning."
   },
   "footer": {
     "partners": "Hamkorlar",
     "menu": "Menyu",
-    "copyright": "© 2026 UYCHI BUILDERS. Namangan viloyati, Uychi tumani."
+    "copyright": "© 2026 UYCHI BUILDERS. Tashabbuskor: Namangan davlat texnika universiteti. Uychi tumani."
   },
   "common": {
     "map": "Xaritada ko'rish",
     "newTab": "yangi oynada ochiladi"
+  },
+  "quick": {
+    "title": "Tezkor havolalar",
+    "items": [
+      {
+        "title": "Yo'nalishlar",
+        "text": "O'qitiladigan 8 ta qurilish kasbi"
+      },
+      {
+        "title": "Dastur",
+        "text": "Ustadan — dunyo bozorigacha: 5 bosqich"
+      },
+      {
+        "title": "Xalqaro hamkorlik",
+        "text": "Germaniya, Yaponiya, Koreya, Singapur, BAA"
+      },
+      {
+        "title": "Dastur bosqichlari",
+        "text": "Tashkil etishdan xalqaro bozorgacha"
+      },
+      {
+        "title": "Hamkorlar",
+        "text": "Hokimliklar va IT Park"
+      },
+      {
+        "title": "Joylashuv",
+        "text": "Fakultet xaritada"
+      }
+    ]
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "place": "Qurilish fakulteti"
   }
 }

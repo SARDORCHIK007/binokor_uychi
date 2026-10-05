@@ -1,123 +1,88 @@
-import { lazy, Suspense, useRef, useState, type MutableRefObject } from "react";
 import { useTranslation } from "react-i18next";
-import { m } from "framer-motion";
+import { Info } from "lucide-react";
+import { Flag, FLAG_CODES } from "../components/ui/Flag";
 import { Section } from "../components/ui/Section";
 import { SectionTitle } from "../components/ui/SectionTitle";
-import { Flag, FLAG_CODES } from "../components/ui/Flag";
-import { useInView } from "../hooks/useInView";
-import { useIsMobile } from "../hooks/useIsMobile";
 import { useList } from "../hooks/useList";
-import { useReducedMotion } from "../hooks/useReducedMotion";
-import { useWebGLSupport } from "../hooks/useWebGLSupport";
 
-const GlobeScene = lazy(() => import("../components/three/globe/GlobeScene"));
-
-export interface Country {
+interface Country {
   name: string;
   language: string;
   requirements: string;
   trades: string;
 }
 
-function GlobeFallback({ alt }: { alt: string }) {
-  const [failed, setFailed] = useState(false);
-  if (failed) return <div className="h-full w-full rounded-full bg-surface" aria-hidden="true" />;
-  return (
-    <img
-      src="/fallback/globe.webp"
-      alt={alt}
-      width={800}
-      height={800}
-      loading="lazy"
-      onError={() => setFailed(true)}
-      className="h-full w-full object-contain"
-    />
-  );
-}
-
+/** Xalqaro yo'nalishlar: rasmiy jadval (desktop) va kartochkalar (telefon). */
 export function International() {
   const { t } = useTranslation();
   const countries = useList<Country>("international.countries");
-  const reduced = useReducedMotion();
-  const webgl = useWebGLSupport();
-  const mobile = useIsMobile();
-  const [hovered, setHovered] = useState<number | null>(null);
-
-  // 3D globus ekranga 200px qolganda yuklanadi; ko'rinmasa to'xtaydi
-  const [nearRef, near] = useInView<HTMLDivElement>({ rootMargin: "200px" });
-  const [visRef, visible] = useInView<HTMLDivElement>({ rootMargin: "0px" });
-  // Yoylar globusning o'zi ekrandan o'tayotganda chiziladi (mobilda ham)
-  const globeRef = useRef<HTMLDivElement | null>(null);
-  const setGlobeRef = (el: HTMLDivElement | null) => {
-    globeRef.current = el;
-    (visRef as MutableRefObject<HTMLDivElement | null>).current = el;
-  };
+  const L = (k: string) => t(`international.labels.${k}`);
 
   return (
-    <Section id="international" tone="base">
-      <SectionTitle id="international-title" eyebrow={`05 — ${t("nav.international")}`} intro={t("international.intro")}>
+    <Section id="international" tone="soft">
+      <SectionTitle id="international-title" intro={t("international.intro")}>
         {t("international.title")}
       </SectionTitle>
 
-      <div ref={nearRef} className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-        <div
-          ref={setGlobeRef}
-          className="relative mx-auto aspect-square w-full max-w-[460px] lg:sticky lg:top-28 lg:max-w-none lg:self-start"
-        >
-          {webgl ? (
-            near && (
-              <Suspense fallback={null}>
-                <GlobeScene
-                  triggerRef={globeRef}
-                  hovered={hovered}
-                  reduced={reduced}
-                  active={visible}
-                  mobile={mobile}
-                  label={t("international.globeAlt")}
-                />
-              </Suspense>
-            )
-          ) : (
-            <GlobeFallback alt={t("international.globeAlt")} />
-          )}
-        </div>
-
-        <ul className="space-y-4" onMouseLeave={() => setHovered(null)}>
-          {countries.map((c, i) => (
-            <m.li
-              key={c.name}
-              tabIndex={0}
-              aria-label={c.name}
-              onMouseEnter={() => setHovered(i)}
-              onFocus={() => setHovered(i)}
-              onBlur={() => setHovered(null)}
-              onClick={() => setHovered(i)}
-              className={`card-dark cursor-default p-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber ${
-                hovered === i ? "!border-amber/70" : ""
-              }`}
-              initial={reduced ? false : { opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-            >
-              <h3 className="mb-4 flex items-center gap-3 text-h3 text-white">
-                <Flag code={FLAG_CODES[i]} />
-                {c.name}
-              </h3>
-              <dl className="grid gap-3 text-[15px] md:grid-cols-[auto_1fr] md:gap-x-6">
-                <dt className="text-muted">{t("international.labels.language")}</dt>
-                <dd className="font-medium">{c.language}</dd>
-                <dt className="text-muted">{t("international.labels.requirements")}</dt>
-                <dd>{c.requirements}</dd>
-                <dt className="text-muted">{t("international.labels.trades")}</dt>
-                <dd>{c.trades}</dd>
-              </dl>
-            </m.li>
-          ))}
-        </ul>
+      {/* Desktop: jadval */}
+      <div className="card hidden overflow-hidden md:block">
+        <table className="w-full text-left text-[15px]">
+          <thead className="bg-brand-50 text-[13px] uppercase tracking-wide text-brand-700">
+            <tr>
+              <th scope="col" className="px-5 py-3 font-bold">{L("country")}</th>
+              <th scope="col" className="px-5 py-3 font-bold">{L("language")}</th>
+              <th scope="col" className="px-5 py-3 font-bold">{L("requirements")}</th>
+              <th scope="col" className="px-5 py-3 font-bold">{L("trades")}</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-line">
+            {countries.map((c, i) => (
+              <tr key={c.name} className="align-top">
+                <th scope="row" className="px-5 py-4 font-medium">
+                  <span className="flex items-center gap-3">
+                    <Flag code={FLAG_CODES[i]} />
+                    {c.name}
+                  </span>
+                </th>
+                <td className="px-5 py-4">{c.language}</td>
+                <td className="px-5 py-4 text-muted">{c.requirements}</td>
+                <td className="px-5 py-4 text-muted">{c.trades}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
-      <p className="mt-10 max-w-3xl border-l-2 border-amber/50 pl-4 text-sm text-muted">{t("international.note")}</p>
+      {/* Telefon: kartochkalar */}
+      <ul className="grid gap-3 md:hidden">
+        {countries.map((c, i) => (
+          <li key={c.name} className="card p-5">
+            <p className="mb-3 flex items-center gap-3 font-heading text-[16px] font-bold">
+              <Flag code={FLAG_CODES[i]} />
+              {c.name}
+            </p>
+            <dl className="grid gap-2 text-[14px]">
+              <div>
+                <dt className="text-muted">{L("language")}</dt>
+                <dd className="font-medium">{c.language}</dd>
+              </div>
+              <div>
+                <dt className="text-muted">{L("requirements")}</dt>
+                <dd>{c.requirements}</dd>
+              </div>
+              <div>
+                <dt className="text-muted">{L("trades")}</dt>
+                <dd>{c.trades}</dd>
+              </div>
+            </dl>
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-6 flex max-w-3xl items-start gap-2 text-[14px] text-muted">
+        <Info className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
+        {t("international.note")}
+      </p>
     </Section>
   );
 }

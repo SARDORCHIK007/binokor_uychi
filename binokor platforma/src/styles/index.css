@@ -6,7 +6,6 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
-    color-scheme: dark;
   }
   @media (prefers-reduced-motion: reduce) {
     html {
@@ -14,28 +13,19 @@
     }
   }
   body {
-    @apply bg-ink font-sans text-body text-white antialiased lg:text-body-lg;
-    overflow-x: hidden;
-  }
-  /* clip — sticky elementlarni buzmasdan gorizontal toshishni kesadi */
-  html,
-  body,
-  main > section {
-    overflow-x: clip;
+    @apply bg-white font-sans text-body text-ink antialiased;
   }
   h1,
   h2,
-  h3 {
-    @apply font-heading;
+  h3,
+  h4 {
+    @apply font-heading text-ink;
   }
   section[id] {
-    scroll-margin-top: 72px;
-  }
-  ::selection {
-    @apply bg-amber text-ink;
+    scroll-margin-top: 88px;
   }
   :focus-visible {
-    @apply outline-none ring-2 ring-amber ring-offset-2 ring-offset-ink;
+    @apply outline-none ring-2 ring-brand ring-offset-2;
   }
 }
 
@@ -43,41 +33,15 @@
   .container-content {
     @apply mx-auto w-full max-w-content px-4 md:px-6;
   }
-
-  /* Nozik chizma to'ri (blueprint) — asosiy fon ustida */
-  .bg-grid {
-    background-color: theme("colors.ink");
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-    background-size: 56px 56px;
-    background-position: center top;
+  /* Oq kartochka: ingichka chegara, yengil soya */
+  .card {
+    @apply rounded-card border border-line bg-white shadow-card;
   }
-
-  /* Solid to'q kartochka: ingichka chegara, hover'da amber chegara (blur/shaffoflik yo'q) */
-  .card-dark {
-    @apply rounded-card border border-line bg-surface shadow-card transition-[border-color,box-shadow] duration-300;
+  .card-link {
+    @apply transition-[border-color,box-shadow] duration-200 hover:border-brand/40 hover:shadow-card-hover;
   }
-  .card-dark-hover {
-    @apply hover:border-amber/50 hover:shadow-card-hover;
-  }
-
-  /* Bo'lim belgisi: "01 — Loyiha" */
-  .eyebrow {
-    @apply inline-flex items-center gap-3 font-heading text-xs font-bold uppercase tracking-[0.22em] text-amber;
-  }
-  .eyebrow::before {
-    content: "";
-    @apply h-px w-8 bg-amber;
-  }
-}
-
-@layer components {
-  /* Faqat to'r chiziqlari (fon rangisiz) — gradient ustiga qo'yish uchun */
-  .grid-lines {
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-    background-size: 56px 56px;
+  /* Bo'lim belgisi (kichik ko'k yozuv) */
+  .kicker {
+    @apply mb-2 font-heading text-[12px] font-bold uppercase tracking-[0.1em] text-brand;
   }
 }
