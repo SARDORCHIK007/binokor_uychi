@@ -76,7 +76,7 @@ export function Modal({ open, onClose, labelledBy, closeLabel, children }: Props
           type="button"
           onClick={onClose}
           aria-label={closeLabel}
-          className="absolute right-3 top-3 rounded-md p-2 text-muted hover:bg-soft hover:text-ink"
+          className="absolute right-3 top-3 z-10 rounded-md bg-white/95 p-2 text-ink shadow-card hover:bg-white"
         >
           <X className="h-5 w-5" aria-hidden="true" />
         </button>

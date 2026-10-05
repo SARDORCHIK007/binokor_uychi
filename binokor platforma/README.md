@@ -93,6 +93,8 @@ Fayl: `src/data/partners.ts`
 - **"Zamonaviy qurilish kasblari" suratlari** — `public/gallery/` (welding, concrete, site, lift.webp;
   fon videosidan olingan kadrlar). Sarlavhalari — `gallery.items`. Haqiqiy suratlar bo'lsa, shu
   nomdagi fayllarni almashtiring.
+- **Kasblar kartalari suratlari** — `public/trades/` (bricklayer, concrete, welder, electrician,
+  plumber, tiler, carpenter, ganch.webp; 800×500). Almashtirish uchun shu nomdagi faylni almashtiring.
 - **Asosiy raqamlar** (bosh ekran ostidagi oq panel) — `stats.items` (uz.json / en.json).
 - **Telegram'da havola rasmi** — `public/og-image.jpg` (1200×630).
 
