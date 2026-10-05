@@ -214,8 +214,10 @@ Loyihani GitHub'ga yuklang, xizmatda "Build command" — `npm run build`, "Outpu
 Telegram, Facebook va boshqa tarmoqlarda havola ulashilganda chiqadigan rasm —
 `public/og-image.jpg` (1200×630 px).
 
-Domen ma'lum bo'lgach, `index.html` faylida `og-image.jpg` qatnashgan **ikki joyni** to'liq
-manzil bilan almashtiring (tarmoqlar nisbiy manzilni tushunmaydi):
+Sayt hozir **https://uychi-builders.vercel.app** manzilida (Vercel, GitHub'ga ulangan — har bir
+yuklangan o'zgarishdan keyin avtomatik yangilanadi). Boshqa domenga o'tilsa, `index.html` dagi
+`og:url`, `og:image`, `twitter:image`, `canonical` qatorlarini hamda `public/robots.txt` va
+`public/sitemap.xml` dagi manzilni almashtiring (tarmoqlar nisbiy manzilni tushunmaydi):
 
 ```html
 <meta property="og:image" content="https://SIZNING-DOMEN.uz/og-image.jpg" />
