@@ -18,7 +18,8 @@
     "menuClose": "Close menu",
     "toTop": "Back to top",
     "langLabel": "Choose language",
-    "main": "Main menu"
+    "main": "Main menu",
+    "statistics": "Statistics"
   },
   "hero": {
     "subtitle": "From Uychi to the world — professional builders",
@@ -445,5 +446,60 @@
       "Reinforced-concrete frame construction",
       "Work at height"
     ]
+  },
+  "statistics": {
+    "kicker": "Statistics",
+    "title": "Uychi District construction workers in numbers",
+    "intro": "Data collected across the district's 53 mahallas: the number of construction workers, their trades and employment status.",
+    "tiles": [
+      {
+        "label": "construction workers",
+        "note": "across 53 mahallas"
+      },
+      {
+        "label": "work informally",
+        "note": "{{n}} workers"
+      },
+      {
+        "label": "work formally",
+        "note": "{{n}} workers"
+      },
+      {
+        "label": "work abroad as migrants",
+        "note": "one in three; of them {{n}} formally"
+      }
+    ],
+    "chartTitle": "Workers by trade",
+    "formal": "Formal",
+    "informal": "Informal",
+    "total": "Total",
+    "trade": "Trade",
+    "share": "formal share",
+    "tableToggle": "View as a table",
+    "source": "Source: data on construction workers by mahalla, Uychi District, 2026.",
+    "definition": "Formal — a worker with an employment contract or registered as self-employed.",
+    "trades": {
+      "bricklayer": "Bricklayer",
+      "concrete": "Concrete worker",
+      "painter": "Painter",
+      "plasterer": "Plasterer",
+      "facade": "Facade worker",
+      "roofer": "Roofer",
+      "carpenter": "Carpenter",
+      "finisher": "Finisher",
+      "drywall": "Drywall installer",
+      "rebar": "Rebar worker",
+      "plumber": "Plumber",
+      "electrician": "Electrician",
+      "tiler": "Tiler",
+      "welder": "Welder",
+      "operator": "Machine operator",
+      "blacksmith": "Blacksmith",
+      "locksmith": "Locksmith",
+      "ganch": "Ganch carver",
+      "woodcarver": "Wood carver",
+      "potter": "Potter",
+      "other": "Other trades"
+    }
   }
 }

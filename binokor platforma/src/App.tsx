@@ -3,6 +3,7 @@ import { Footer } from "./components/layout/Footer";
 import { Hero } from "./sections/Hero";
 import { QuickLinks } from "./sections/QuickLinks";
 import { About } from "./sections/About";
+import { Statistics } from "./sections/Statistics";
 import { Program } from "./sections/Program";
 import { Gallery } from "./sections/Gallery";
 import { Trades } from "./sections/Trades";
@@ -20,6 +21,7 @@ export default function App() {
         <Hero />
         <QuickLinks />
         <About />
+        <Statistics />
         <Program />
         <Gallery />
         <Trades />

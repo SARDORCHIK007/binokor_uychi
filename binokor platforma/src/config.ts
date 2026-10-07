@@ -30,6 +30,7 @@ export const CONFIG: SiteConfig = {
 /** Menyu va anchor havolalar tartibi. */
 export const NAV_ITEMS = [
   { id: "about", key: "nav.about" },
+  { id: "statistics", key: "nav.statistics" },
   { id: "program", key: "nav.program" },
   { id: "trades", key: "nav.trades" },
   { id: "international", key: "nav.international" },

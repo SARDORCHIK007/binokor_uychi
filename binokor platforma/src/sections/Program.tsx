@@ -17,7 +17,7 @@ export function Program() {
   const steps = useList<Step>("model.steps");
 
   return (
-    <Section id="program" tone="soft">
+    <Section id="program" tone="white">
       <SectionTitle id="program-title" kicker={t("brand.program")} intro={t("model.intro")}>
         {t("model.title")}
       </SectionTitle>

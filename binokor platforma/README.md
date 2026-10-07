@@ -95,6 +95,8 @@ Fayl: `src/data/partners.ts`
   nomdagi fayllarni almashtiring.
 - **Kasblar kartalari suratlari** — `public/trades/` (bricklayer, concrete, welder, electrician,
   plumber, tiler, carpenter, ganch.webp; 800×500). Almashtirish uchun shu nomdagi faylni almashtiring.
+- **Statistika bo'limi** (ustalar soni, kasblar diagrammasi) — raqamlar `src/data/stats.ts` da,
+  matnlar `statistics` kalitida. Yangi ma'lumot kelsa, shu fayldagi sonlarni almashtiring.
 - **Asosiy raqamlar** (bosh ekran ostidagi oq panel) — `stats.items` (uz.json / en.json).
 - **Telegram'da havola rasmi** — `public/og-image.jpg` (1200×630).
 

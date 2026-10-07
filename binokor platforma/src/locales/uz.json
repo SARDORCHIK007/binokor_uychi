@@ -18,7 +18,8 @@
     "menuClose": "Menyuni yopish",
     "toTop": "Sahifa boshiga qaytish",
     "langLabel": "Tilni tanlash",
-    "main": "Asosiy menyu"
+    "main": "Asosiy menyu",
+    "statistics": "Statistika"
   },
   "hero": {
     "subtitle": "Uychidan dunyoga — professional ustalar",
@@ -445,5 +446,60 @@
       "Monolit karkas qurilish",
       "Balandlikda montaj ishlari"
     ]
+  },
+  "statistics": {
+    "kicker": "Statistik ma'lumot",
+    "title": "Uychi tumani qurilish ustalari raqamlarda",
+    "intro": "Tumandagi 53 ta mahalla kesimida to'plangan ma'lumot: qurilish ustalari soni, ularning kasblari va bandlik holati.",
+    "tiles": [
+      {
+        "label": "qurilish ustasi",
+        "note": "53 ta mahallada"
+      },
+      {
+        "label": "norasmiy ishlaydi",
+        "note": "{{n}} nafar usta"
+      },
+      {
+        "label": "rasmiy ishlaydi",
+        "note": "{{n}} nafar usta"
+      },
+      {
+        "label": "migratsiyada",
+        "note": "har 3 ustadan biri; shundan {{n}} nafari rasmiy"
+      }
+    ],
+    "chartTitle": "Kasblar bo'yicha ustalar soni",
+    "formal": "Rasmiy",
+    "informal": "Norasmiy",
+    "total": "Jami",
+    "trade": "Kasb",
+    "share": "rasmiy ulushi",
+    "tableToggle": "Jadval ko'rinishida ko'rish",
+    "source": "Manba: Uychi tumani mahallalari kesimida qurilish ustalari to'g'risida ma'lumot, 2026-yil.",
+    "definition": "Rasmiy — mehnat shartnomasi bilan yoki o'zini o'zi band qilgan shaxs sifatida ro'yxatdan o'tgan usta.",
+    "trades": {
+      "bricklayer": "G'isht teruvchi",
+      "concrete": "Betonchi",
+      "painter": "Bo'yoqchi",
+      "plasterer": "Suvoqchi",
+      "facade": "Fasadchi",
+      "roofer": "Tom yopuvchi",
+      "carpenter": "Duradgor",
+      "finisher": "Pardozlovchi (otdelkachi)",
+      "drywall": "Gipsokartonchi",
+      "rebar": "Armaturachi",
+      "plumber": "Santexnik",
+      "electrician": "Elektrik",
+      "tiler": "Kafelchi",
+      "welder": "Payvandchi",
+      "operator": "Texnika mashinisti",
+      "blacksmith": "Temirchi",
+      "locksmith": "Chilangar",
+      "ganch": "Ganchkor",
+      "woodcarver": "Yog'och o'ymakor (naqqosh)",
+      "potter": "Kulol",
+      "other": "Boshqa kasblar"
+    }
   }
 }
